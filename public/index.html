@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>松戸市バス停マップ | Firebase + Google Maps</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>🚌</text></svg>">
+    
+    <!-- Google Maps API with Web Components -->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjEWFO0oq7N7A4hM8o9pQJLFADZ5EnaFw&callback=console.debug&libraries=maps,marker&v=beta"></script>
+</head>
+<body>
+    <!-- ローディングオーバーレイ -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spinner">🚌</div>
+            <div class="loading-text">Firebase接続中...</div>
+        </div>
+    </div>
+
+    <!-- メインコンテナ -->
+    <div class="container">
+        <!-- サイドバー -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1>🚌 松戸バス停マップ</h1>
+                <p class="subtitle">リアルタイム時刻表システム</p>
+            </div>
+            
+            <!-- 接続ステータス -->
+            <div class="status" id="connectionStatus">
+                <span class="status-icon">⏳</span>
+                <span class="status-text">システム起動中...</span>
+            </div>
+            
+            <!-- コントロール -->
+            <div class="controls">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="🔍 バス停名・路線名で検索..." id="searchInput">
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="app.toggleAdminPanel()">
+                        <span class="btn-icon">⚙️</span>
+                        <span class="btn-text">管理</span>
+                    </button>
+                    <button class="btn btn-success" onclick="app.refreshData()">
+                        <span class="btn-icon">🔄</span>
+                        <span class="btn-text">更新</span>
+                    </button>
+                    <button class="btn btn-info" onclick="app.addSampleData()">
+                        <span class="btn-icon">📝</span>
+                        <span class="btn-text">サンプル</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 管理パネル -->
+            <div class="admin-panel" id="adminPanel">
+                <div class="panel-section">
+                    <h3>🆕 新しいバス停を追加</h3>
+                    <div class="form-group">
+                        <input type="text" class="admin-input" placeholder="バス停名" id="newStopName">
+                        <div class="coord-group">
+                            <input type="number" class="admin-input coord-input" placeholder="緯度" step="0.0001" id="newStopLat">
+                            <input type="number" class="admin-input coord-input" placeholder="経度" step="0.0001" id="newStopLng">
+                        </div>
+                        <input type="text" class="admin-input" placeholder="路線名 (カンマ区切り)" id="newStopRoutes">
+                        <button class="btn btn-success full-width" onclick="app.addBusStop()">
+                            バス停追加
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="panel-section">
+                    <h3>⏰ 時刻表を追加</h3>
+                    <div class="form-group">
+                        <select class="admin-input" id="selectBusStop">
+                            <option value="">バス停を選択</option>
+                        </select>
+                        <input type="text" class="admin-input" placeholder="路線名 (例: 松01)" id="newRouteName">
+                        <input type="text" class="admin-input" placeholder="行き先" id="newDestination">
+                        <input type="text" class="admin-input" placeholder="平日時刻 (例: 07:15,07:30,07:45)" id="newWeekdayTimes">
+                        <input type="text" class="admin-input" placeholder="土曜時刻 (オプション)" id="newSaturdayTimes">
+                        <input type="text" class="admin-input" placeholder="日曜時刻 (オプション)" id="newSundayTimes">
+                        <button class="btn btn-success full-width" onclick="app.addTimetable()">
+                            時刻表追加
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- バス停リスト -->
+            <div class="bus-stop-list" id="busStopList">
+                <div class="loading-message">
+                    <div class="loading-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    データ読み込み中...
+                </div>
+            </div>
+        </div>
+        
+        <!-- マップコンテナ -->
+        <div class="map-container">
+            <gmp-map id="map" center="35.7848,139.9026" zoom="13" map-id="DEMO_MAP_ID">
+                <!-- バス停マーカーがここに動的に追加されます -->
+            </gmp-map>
+            
+            <!-- マップオーバーレイ -->
+            <div class="map-overlay">
+                <div class="map-info">
+                    <span id="markerCount">0</span> バス停
+                </div>
+                <button class="map-btn" onclick="app.centerOnMatsudo()" title="松戸駅に戻る">
+                    🏠
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    
+    <!-- アプリケーションスクリプト -->
+    <script src="js/config.js"></script>
+    <script src="data/sample-data.js"></script>
+    <script src="js/firebase-service.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

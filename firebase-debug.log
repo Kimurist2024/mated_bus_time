@@ -1,0 +1,100 @@
+[debug] [2025-06-30T00:18:55.381Z] ----------------------------------------------------------------------
+[debug] [2025-06-30T00:18:55.383Z] Command:       /Users/kimura2003/.nvm/versions/node/v20.19.3/bin/node /Users/kimura2003/.nvm/versions/node/v20.19.3/bin/firebase serve
+[debug] [2025-06-30T00:18:55.383Z] CLI Version:   14.9.0
+[debug] [2025-06-30T00:18:55.383Z] Platform:      darwin
+[debug] [2025-06-30T00:18:55.383Z] Node Version:  v20.19.3
+[debug] [2025-06-30T00:18:55.383Z] Time:          Mon Jun 30 2025 09:18:55 GMT+0900 (日本標準時)
+[debug] [2025-06-30T00:18:55.383Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-30T00:18:55.467Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-30T00:18:55.467Z] > authorizing via signed-in user (ryuhki2003@gmail.com)
+[debug] [2025-06-30T00:18:55.467Z] [iam] checking project matsudo-bus-system for permissions ["firebase.projects.get"]
+[debug] [2025-06-30T00:18:55.467Z] Checked if tokens are valid: true, expires at: 1751246258672
+[debug] [2025-06-30T00:18:55.467Z] Checked if tokens are valid: true, expires at: 1751246258672
+[debug] [2025-06-30T00:18:55.468Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/matsudo-bus-system:testIamPermissions [none]
+[debug] [2025-06-30T00:18:55.468Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/matsudo-bus-system:testIamPermissions x-goog-quota-user=projects/matsudo-bus-system
+[debug] [2025-06-30T00:18:55.468Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/matsudo-bus-system:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-06-30T00:18:56.166Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/matsudo-bus-system:testIamPermissions 200
+[debug] [2025-06-30T00:18:56.166Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/matsudo-bus-system:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-06-30T00:18:56.167Z] Checked if tokens are valid: true, expires at: 1751246258672
+[debug] [2025-06-30T00:18:56.167Z] Checked if tokens are valid: true, expires at: 1751246258672
+[debug] [2025-06-30T00:18:56.167Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/matsudo-bus-system [none]
+[debug] [2025-06-30T00:18:56.353Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/matsudo-bus-system 200
+[debug] [2025-06-30T00:18:56.354Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/matsudo-bus-system {"projectNumber":"446206515873","projectId":"matsudo-bus-system","lifecycleState":"ACTIVE","name":"matsudo-bus-system ","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-06-29T08:58:10.313539Z"}
+[info] 
+[info] === Serving from '/Users/kimura2003/Downloads/matudo_bus_system'...
+[info] 
+[debug] [2025-06-30T00:18:56.355Z] Checked if tokens are valid: true, expires at: 1751246258672
+[debug] [2025-06-30T00:18:56.355Z] Checked if tokens are valid: true, expires at: 1751246258672
+[debug] [2025-06-30T00:18:56.355Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/matsudo-bus-system/sites 
+[debug] [2025-06-30T00:18:57.055Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/matsudo-bus-system/sites 200
+[debug] [2025-06-30T00:18:57.056Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/matsudo-bus-system/sites {"sites":[{"name":"projects/matsudo-bus-system/sites/matsudo-bus-system","defaultUrl":"https://matsudo-bus-system.web.app","appId":"1:446206515873:web:3a0a1914c129909cda2ee0","type":"DEFAULT_SITE"}]}
+[debug] [2025-06-30T00:18:57.056Z] Checked if tokens are valid: true, expires at: 1751246258672
+[debug] [2025-06-30T00:18:57.056Z] Checked if tokens are valid: true, expires at: 1751246258672
+[debug] [2025-06-30T00:18:57.057Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/matsudo-bus-system/webApps/1:446206515873:web:3a0a1914c129909cda2ee0/config [none]
+[debug] [2025-06-30T00:18:58.038Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/matsudo-bus-system/webApps/1:446206515873:web:3a0a1914c129909cda2ee0/config 200
+[debug] [2025-06-30T00:18:58.038Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/matsudo-bus-system/webApps/1:446206515873:web:3a0a1914c129909cda2ee0/config {"projectId":"matsudo-bus-system","appId":"1:446206515873:web:3a0a1914c129909cda2ee0","storageBucket":"matsudo-bus-system.firebasestorage.app","apiKey":"AIzaSyAAae6tqe71YrS_VtpTl7FvoUkHkR_nwPY","authDomain":"matsudo-bus-system.firebaseapp.com","messagingSenderId":"446206515873","measurementId":"G-TPJDJ0KL38"}
+[debug] [2025-06-30T00:18:58.051Z] Checked if tokens are valid: true, expires at: 1751246258672
+[debug] [2025-06-30T00:18:58.051Z] Checked if tokens are valid: true, expires at: 1751246258672
+[debug] [2025-06-30T00:18:58.051Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/matsudo-bus-system [none]
+[debug] [2025-06-30T00:18:58.309Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/matsudo-bus-system 200
+[debug] [2025-06-30T00:18:58.309Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/matsudo-bus-system {"projectId":"matsudo-bus-system","projectNumber":"446206515873","displayName":"matsudo-bus-system ","name":"projects/matsudo-bus-system","resources":{"hostingSite":"matsudo-bus-system"},"state":"ACTIVE","etag":"1_c0e51704-afa2-4708-bc4a-1d85d1407269"}
+[info] i  hosting[matsudo-bus-system]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting[matsudo-bus-system]: Local server: http://localhost:5002 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5002\u001b[22m\u001b[24m"}}
+[info] i  hosting: ::1 - - [30/Jun/2025:00:19:07 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [30/Jun/2025:00:19:07 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15\""}}
+[info] i  hosting: ::1 - - [30/Jun/2025:00:19:07 +0000] "GET /css/styles.css HTTP/1.1" 200 - "http://localhost:5002/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [30/Jun/2025:00:19:07 +0000] \"GET /css/styles.css HTTP/1.1\" 200 - \"http://localhost:5002/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15\""}}
+[info] i  hosting: ::1 - - [30/Jun/2025:00:19:07 +0000] "GET /js/config.js HTTP/1.1" 200 819 "http://localhost:5002/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [30/Jun/2025:00:19:07 +0000] \"GET /js/config.js HTTP/1.1\" 200 819 \"http://localhost:5002/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15\""}}
+[info] i  hosting: ::1 - - [30/Jun/2025:00:19:07 +0000] "GET /data/sample-data.js HTTP/1.1" 200 - "http://localhost:5002/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [30/Jun/2025:00:19:07 +0000] \"GET /data/sample-data.js HTTP/1.1\" 200 - \"http://localhost:5002/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15\""}}
+[info] i  hosting: ::1 - - [30/Jun/2025:00:19:07 +0000] "GET /js/firebase-service.js HTTP/1.1" 200 - "http://localhost:5002/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [30/Jun/2025:00:19:07 +0000] \"GET /js/firebase-service.js HTTP/1.1\" 200 - \"http://localhost:5002/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15\""}}
+[info] i  hosting: ::1 - - [30/Jun/2025:00:19:07 +0000] "GET /js/app.js HTTP/1.1" 200 - "http://localhost:5002/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [30/Jun/2025:00:19:07 +0000] \"GET /js/app.js HTTP/1.1\" 200 - \"http://localhost:5002/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15\""}}
+[info] i  hosting: ::1 - - [30/Jun/2025:00:19:09 +0000] "GET /favicon.ico HTTP/1.1" 200 - "http://localhost:5002/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [30/Jun/2025:00:19:09 +0000] \"GET /favicon.ico HTTP/1.1\" 200 - \"http://localhost:5002/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15\""}}
+[debug] [2025-06-30T00:34:27.256Z] ----------------------------------------------------------------------
+[debug] [2025-06-30T00:34:27.257Z] Command:       /Users/kimura2003/.nvm/versions/node/v20.19.3/bin/node /Users/kimura2003/.nvm/versions/node/v20.19.3/bin/firebase serve
+[debug] [2025-06-30T00:34:27.258Z] CLI Version:   14.9.0
+[debug] [2025-06-30T00:34:27.258Z] Platform:      darwin
+[debug] [2025-06-30T00:34:27.258Z] Node Version:  v20.19.3
+[debug] [2025-06-30T00:34:27.258Z] Time:          Mon Jun 30 2025 09:34:27 GMT+0900 (日本標準時)
+[debug] [2025-06-30T00:34:27.258Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-30T00:34:27.344Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-30T00:34:27.344Z] > authorizing via signed-in user (ryuhki2003@gmail.com)
+[debug] [2025-06-30T00:34:27.344Z] [iam] checking project matsudo-bus-system for permissions ["firebase.projects.get"]
+[debug] [2025-06-30T00:34:27.344Z] Checked if tokens are valid: true, expires at: 1751246258672
+[debug] [2025-06-30T00:34:27.344Z] Checked if tokens are valid: true, expires at: 1751246258672
+[debug] [2025-06-30T00:34:27.345Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/matsudo-bus-system:testIamPermissions [none]
+[debug] [2025-06-30T00:34:27.345Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/matsudo-bus-system:testIamPermissions x-goog-quota-user=projects/matsudo-bus-system
+[debug] [2025-06-30T00:34:27.345Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/matsudo-bus-system:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-06-30T00:34:28.021Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/matsudo-bus-system:testIamPermissions 200
+[debug] [2025-06-30T00:34:28.021Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/matsudo-bus-system:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-06-30T00:34:28.022Z] Checked if tokens are valid: true, expires at: 1751246258672
+[debug] [2025-06-30T00:34:28.022Z] Checked if tokens are valid: true, expires at: 1751246258672
+[debug] [2025-06-30T00:34:28.022Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/matsudo-bus-system [none]
+[debug] [2025-06-30T00:34:28.211Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/matsudo-bus-system 200
+[debug] [2025-06-30T00:34:28.211Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/matsudo-bus-system {"projectNumber":"446206515873","projectId":"matsudo-bus-system","lifecycleState":"ACTIVE","name":"matsudo-bus-system ","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-06-29T08:58:10.313539Z"}
+[info] 
+[info] === Serving from '/Users/kimura2003/Downloads/matudo_bus_system'...
+[info] 
+[debug] [2025-06-30T00:34:28.215Z] Checked if tokens are valid: true, expires at: 1751246258672
+[debug] [2025-06-30T00:34:28.215Z] Checked if tokens are valid: true, expires at: 1751246258672
+[debug] [2025-06-30T00:34:28.215Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/matsudo-bus-system/sites 
+[debug] [2025-06-30T00:34:28.907Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/matsudo-bus-system/sites 200
+[debug] [2025-06-30T00:34:28.907Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/matsudo-bus-system/sites {"sites":[{"name":"projects/matsudo-bus-system/sites/matsudo-bus-system","defaultUrl":"https://matsudo-bus-system.web.app","appId":"1:446206515873:web:3a0a1914c129909cda2ee0","type":"DEFAULT_SITE"}]}
+[debug] [2025-06-30T00:34:28.908Z] Checked if tokens are valid: true, expires at: 1751246258672
+[debug] [2025-06-30T00:34:28.908Z] Checked if tokens are valid: true, expires at: 1751246258672
+[debug] [2025-06-30T00:34:28.908Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/matsudo-bus-system/webApps/1:446206515873:web:3a0a1914c129909cda2ee0/config [none]
+[debug] [2025-06-30T00:34:29.740Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/matsudo-bus-system/webApps/1:446206515873:web:3a0a1914c129909cda2ee0/config 200
+[debug] [2025-06-30T00:34:29.740Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/matsudo-bus-system/webApps/1:446206515873:web:3a0a1914c129909cda2ee0/config {"projectId":"matsudo-bus-system","appId":"1:446206515873:web:3a0a1914c129909cda2ee0","storageBucket":"matsudo-bus-system.firebasestorage.app","apiKey":"AIzaSyAAae6tqe71YrS_VtpTl7FvoUkHkR_nwPY","authDomain":"matsudo-bus-system.firebaseapp.com","messagingSenderId":"446206515873","measurementId":"G-TPJDJ0KL38"}
+[debug] [2025-06-30T00:34:29.749Z] Checked if tokens are valid: true, expires at: 1751246258672
+[debug] [2025-06-30T00:34:29.749Z] Checked if tokens are valid: true, expires at: 1751246258672
+[debug] [2025-06-30T00:34:29.750Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/matsudo-bus-system [none]
+[debug] [2025-06-30T00:34:30.024Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/matsudo-bus-system 200
+[debug] [2025-06-30T00:34:30.024Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/matsudo-bus-system {"projectId":"matsudo-bus-system","projectNumber":"446206515873","displayName":"matsudo-bus-system ","name":"projects/matsudo-bus-system","resources":{"hostingSite":"matsudo-bus-system"},"state":"ACTIVE","etag":"1_c0e51704-afa2-4708-bc4a-1d85d1407269"}
+[info] i  hosting[matsudo-bus-system]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting[matsudo-bus-system]: Local server: http://localhost:5003 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5003\u001b[22m\u001b[24m"}}
+[info] i  hosting: ::1 - - [30/Jun/2025:00:34:37 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [30/Jun/2025:00:34:37 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15\""}}
+[info] i  hosting: ::1 - - [30/Jun/2025:00:34:37 +0000] "GET /css/styles.css HTTP/1.1" 200 - "http://localhost:5003/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [30/Jun/2025:00:34:37 +0000] \"GET /css/styles.css HTTP/1.1\" 200 - \"http://localhost:5003/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15\""}}
+[info] i  hosting: ::1 - - [30/Jun/2025:00:34:37 +0000] "GET /js/config.js HTTP/1.1" 200 819 "http://localhost:5003/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [30/Jun/2025:00:34:37 +0000] \"GET /js/config.js HTTP/1.1\" 200 819 \"http://localhost:5003/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15\""}}
+[info] i  hosting: ::1 - - [30/Jun/2025:00:34:37 +0000] "GET /data/sample-data.js HTTP/1.1" 200 - "http://localhost:5003/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [30/Jun/2025:00:34:37 +0000] \"GET /data/sample-data.js HTTP/1.1\" 200 - \"http://localhost:5003/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15\""}}
+[info] i  hosting: ::1 - - [30/Jun/2025:00:34:37 +0000] "GET /js/firebase-service.js HTTP/1.1" 200 - "http://localhost:5003/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [30/Jun/2025:00:34:37 +0000] \"GET /js/firebase-service.js HTTP/1.1\" 200 - \"http://localhost:5003/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15\""}}
+[info] i  hosting: ::1 - - [30/Jun/2025:00:34:37 +0000] "GET /js/app.js HTTP/1.1" 200 - "http://localhost:5003/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [30/Jun/2025:00:34:37 +0000] \"GET /js/app.js HTTP/1.1\" 200 - \"http://localhost:5003/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15\""}}
+[info] i  hosting: ::1 - - [30/Jun/2025:00:34:38 +0000] "GET /favicon.ico HTTP/1.1" 200 - "http://localhost:5003/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [30/Jun/2025:00:34:38 +0000] \"GET /favicon.ico HTTP/1.1\" 200 - \"http://localhost:5003/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15\""}}
