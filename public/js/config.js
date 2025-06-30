@@ -1,6 +1,6 @@
 // Firebase設定 - 松戸バス停システム用（実際の設定値）
 const firebaseConfig = {
-    apiKey: "AIzaSyAAae6tqe71YrS_VtpTl7FvoUkHkR_nwPY",
+    apiKey: "yourkey",
     authDomain: "matsudo-bus-system.firebaseapp.com",
     projectId: "matsudo-bus-system",
     storageBucket: "matsudo-bus-system.firebasestorage.app",
